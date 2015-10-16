@@ -4,110 +4,63 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="slider.css" />
-    <link rel="stylesheet" href="range.css" />
     <script src="jquery-1.11.3.min.js"></script>
     <script src="slider.js"></script>
-    <script src="range.js"></script>
   </head>
   <body style="background">
-
     <h1 style="background-color: black; color: white;">Slider example</h1>
 
-    <!-- Removed; -->
-    <!--div style="width: 500px;background-color: silver;padding:20px;">
-    <label style="display: inline">Width</label>
-    <input class="slider" id="width" data-min="0" data-max="150" data-step="30"/>
-
-    </div>
-
-
-    <label>Height</label>
-    <input class="slider" id="height" data-min="10" data-max="500" data-step="10"/>
-
-    <p>Your price: <span id="price"></span><p>
-    <p id="jocke">ok</p-->
-
-
-
-    <div class="range-content">
-      <span class="fixed-content">
-        Bredd: <span class="value">0</span> cm (inches 12")
-      </span>
-      <div class="flexible-content inactive">
-        Bredd: <span class="value">0</span> cm (inches 123)
-      </div>
-    </div>
-    <input type="range" class="test" max="400" min="0" value="0" step="10" />
-
-    <div style="background-color: red;width:800px;padding:50px;">
-      <div class="range-content">
+    <div class="slider">
+      <div class="slider-textbox">
         <span class="fixed-content">
           Bredd: <span class="value">0</span> cm (inches 12")
         </span>
-        <div class="flexible-content inactive">
-        Bredd: <span class="value">0</span> cm (inches 123)
+        <div class="flexible-content hide-content">
+          Bredd: <span class="value">0</span> cm (inches 123)
         </div>
       </div>
+      <canvas id="myCanvas" height="14px" width="1px"></canvas>
       <input type="range" class="test" max="400" min="0" value="0" step="10" />
     </div>
 
-  <!--div style="background-color: aliceblue;width:400px;padding:50px;">
-    <div class="range-content">
-      <span class="fixed-content">
-        Bredd: <span class="value">0</span> cm (inches 12")
-      </span>
-      <div class="flexible-content inactive">
-       Bredd: <span class="value">0</span> cm (inches 123)
-      </div>
-    </div>
-    <input type="range" class="test" max="100" min="0" value="0" step="25" />
-  </div-->
-  <div style="padding:25px;">
-    <div style="display: inline-block; width:400px;margin-right:20px;">
-      <div class="range-content">
-      <span class="fixed-content">
-        Bredd: <span class="value">0</span>cm <span style="font-size: 18px;color:#666666">(35,47 inches)</span>
-      </span>
-      <div class="flexible-content inactive">
-       <span class="value">0</span> cm <span style="font-size: 16px; color: #A9A9A9;">(35,47 inches)
-      </div>
-    </div>
-    <input type="range" class="test" max="150" min="30" value="30" step="10" />
-    <canvas id="myCanvas" width="" height="5" style="background-color:blue">
-    </div>
-    <div style="display: inline-block; width:400px">
+    <div style="padding:25px;">
+      <div style="display: inline-block; width:400px;margin-right:20px;">
 
-    <div style="position:relative">
-      <div class="range-content">
-        <span class="fixed-content">
-        Höjd: <span class="value">30</span>cm <span style="font-size: 18px;color:#666666">(35,47 inches)</span>
-        </span>
-        <div class="flexible-content inactive">
-          <span class="value">30</span> cm <span style="font-size: 16px; color: #A9A9A9;">(35,47 inches)</span>
+        <div class="slider">
+          <div class="slider-textbox">
+            <span class="fixed-content">
+              Bredd:<span class="value">0</span>cm
+              <span style="font-size: 18px;color:#666666">(35,47 inches)</span>
+            </span>
+            <div class="flexible-content hide-content">
+             <span class="value">0</span>cm
+             <span style="font-size: 16px; color: #A9A9A9;">(35,47 inches)</span>
+            </div>
+          </div>
+          <canvas id="myCanvas" height="14px" width="10px" ></canvas>
+          <input type="range" class="test" max="150" min="30" value="30" step="10" />
+        </div>
+
+      </div>
+      <div style="display: inline-block; width:400px; ">
+
+        <div class="slider">
+          <div class="slider-textbox">
+            <span class="fixed-content">
+              Höjd:<span class="value">30</span>cm
+              <span class="inches">(35,47 inches)</span>
+            </span>
+            <div class="flexible-content hide-content">
+              <span class="value">30</span>cm
+              <span class="inches">(35,47 inches)</span>
+            </div>
+          </div>
+          <canvas id="myCanvas" height="14px" width="10px" ></canvas>
+          <input type="range" class="test" max="150" min="30" value="30" step="10" />
         </div>
       </div>
 
-      <input type="range" max="150" min="30" value="30" step="10" />
-      <canvas id="myCanvas" height="14" width="100%" style="position:absolute; bottom:10px; left:0;background-color: red;"></canvas>
-    <div>
     </div>
-  </div>
 
-    <script>
-      /*$(".slider").on("input", function() {
-        var width = parseInt($("#width").val(), 10);
-       var height = parseInt($("#height").val(), 10);
-       var price = (width + height) * 1.25;
-       $("#price").text(price);
-      });*/
-
-      /*$('input[type="range"]').on('input', function () {
-        var percent = Math.ceil(((this.value - this.min) / (this.max - this.min)) * 100);
-
-            console.log("value" + $(this).left);
-
-            $(this).css('background', '-webkit-linear-gradient(left, green 0%, green ' + percent + '%, black ' + percent + '%)');
-        });*/
-    </script>
   </body>
 </html>
